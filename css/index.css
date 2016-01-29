@@ -1,0 +1,258 @@
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:url(../images/5.jpg) no-repeat;
+	background-size:cover;
+	min-width:600px;
+	font-family:"Helvetica Neue LT Pro","微软雅黑";
+}
+
+.levels{
+	position:relative;
+	display: none;
+}
+.select{
+	width: 300px;
+	height: 120px;
+	background: url(../images/level.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: 38%;
+	top: 80px;
+}
+.select span{
+	display: block;
+	text-align: center;
+	color: #333;
+	line-height: 90px;
+	font-size: 42px;
+}
+.select-level{
+	width: 390px;
+	height: 220px;
+	position: absolute;
+	left: 35%;
+	top: 180px;
+	z-index: 50;
+	background: url(../images/guanka1.png) no-repeat;
+	background-size: contain;
+	font-size: 30px;
+}
+.level{
+	width:60px;
+	height:60px;
+	float:left;
+	margin:80px 0 80px 8%;
+	text-align: center;
+	line-height:60px;
+	background:linear-gradient(#efc289,#d0a95a);
+	box-shadow:0 3px 8px #333;
+	color:#fff;
+	font-weight:800;
+	cursor: pointer;
+}
+.off{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	position: absolute;
+	top: 168px;
+	left: 60%;
+	z-index: 100;
+	background: url(../images/close.png) no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+.guanka{
+	width:390px;
+	height:220px;
+	position:relative;
+	left:35%;
+	top:100px;
+	z-index:50;
+	background:url(../images/guanka1.png) no-repeat;
+	background-size:contain;
+	text-align: center;
+	line-height:160px;
+	font-size:30px;
+	display:none;
+}
+.guanka span{
+	font-size:40px;
+	color:#ff6700;
+}
+.btn{
+	position: relative;
+	bottom:30px;
+	left:0;
+}
+.button{
+	width: 120px;
+	height: 50px;
+	background: linear-gradient(#c4ef3d,#2b701d);
+	box-shadow: 0 5px 5px #333;
+	border-radius: 20px;
+	color:#fff;
+	line-height:50px;
+	cursor:pointer;
+	float:left;
+	margin:0 9.4%;
+}
+.quit{
+	left: 5%;
+}
+.sure{
+	left: 45%;
+}
+.default{
+	width:480px;
+	height:280px;
+	position:absolute;
+	left:30%;
+	top:100px;
+	z-index:50;
+	background:url(../images/panel.png) no-repeat;
+	background-size:cover;
+	display:none;
+}
+.close{
+	width:83px;
+	height:83px;
+	border-radius:50%;
+	position:absolute;
+	top:18px;
+	left:79%;
+	background:url(../images/close.png) no-repeat;
+	background-size:cover;
+	cursor: pointer;
+}
+.yes{
+	width: 60px;
+	height: 35px;
+	position: absolute;
+	left: 25%;
+	bottom: 30px;
+	transform: rotate(-8deg);
+	background: url(../images/yes.png) no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+.no{
+	width: 60px;
+	height: 35px;
+	position: absolute;
+	left: 62%;
+	bottom: 35px;
+	background: url(../images/no.png) no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+.gameOver{
+	width: 350px;
+	height: 60px;
+	position: absolute;
+	left: 14%;
+	top: 110px;
+	transform: rotate(-2deg);
+	background: url(../images/gameOver.png) no-repeat;
+	background-size: contain;
+}
+@keyframes clickPlay {
+	20%{
+		-webkit-transform-origin: top center;
+		-webkit-transform: rotateZ(25deg);
+	}
+	40%{
+		-webkit-transform-origin: top center;
+		-webkit-transform: rotateZ(-10deg);
+	}
+	60% {
+		-webkit-transform-origin: top center;
+		-webkit-transform: rotateZ(10deg);
+	}
+	80% {
+		-webkit-transform-origin: top center;
+		-webkit-transform: rotateZ(-5deg);
+	}
+	100%{
+		-webkit-transform-origin: top center;
+		-webkit-transform: rotateZ(0deg);
+	}
+}
+.play{
+	width:200px;
+	height:180px;
+	position:absolute;
+	left:40%;
+	top:100px;
+	background:url(../images/play1.png) no-repeat;
+	background-size:cover;
+	display: none;
+	animation:clickPlay 2s ease;
+}
+.play span{
+	width:80px;
+	height:50px;
+	position:absolute;
+	left:27%;
+	top:92px;
+	transform: rotate(-8deg);
+	background:url(../images/play2.png) no-repeat;
+	background-size:cover;
+	cursor: pointer;
+}
+.panel{
+	position:fixed;
+	left:0;
+	bottom:0;
+	z-index:10;
+	margin-left:5%;
+}
+.score{
+	text-align: center;
+	color:#333;
+	float:left;
+}
+.die{
+	text-align: center;
+	color:#333;
+	float:left;
+}
+.panel span{
+	display:block;
+	font-size:20px;
+}
+.score span:nth-child(2){
+	width:120px;
+	height:80px;
+	background:url(../images/score1.png) no-repeat;
+	background-size:contain;
+	line-height:40px;
+	font-size:30px;
+	color:#ff6700;
+}
+.die span:nth-child(2){
+	width:120px;
+	height:80px;
+	background:url(../images/die1.png) no-repeat;
+	background-size: contain;
+	line-height:40px;
+	font-size:30px;
+	color:#048ac9;
+}
+.select-button{
+	width: 120px;
+	height: 50px;
+	background: linear-gradient(#fee157,#f8a102);
+	box-shadow: 0 5px 5px #df8606;
+	border-radius: 20px;
+	text-align:center;
+	line-height:50px;
+	margin-top:35px;
+	cursor:pointer;
+	float:left;
+}
+.clear{
+	clear:both;
+}

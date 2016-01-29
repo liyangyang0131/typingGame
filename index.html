@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>打字游戏</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="scripts/jquery-1.11.3.js"></script>
+	<script src="scripts/index.js"></script>
+	<script>
+		$(function(){
+			var games = new game();
+
+			$(".play").show();
+			$(".play span").click(function(){
+				$(".play").hide();
+				games.play();
+			})
+			//进入第几关点击退出
+			$(".quit").click(function(){
+				$("guanka").hide();
+				games.restart();
+				$(".play").show();
+			})
+			//选择关卡
+			$(".select-button").click(function(){
+				clearInterval(games.timerId);
+				games.restart();
+				$(".play").hide();
+				$(".levels").show();
+			})
+			$(".level").click(function(){
+				games.speed = 5+(parseInt($(this).html())-1);
+				games.wordNum = 5+(parseInt($(this).html())-1);
+				$(".levels").hide();
+				games.play();
+			})
+			$(".off").click(function(){
+				$(".levels").hide();
+				$(".play").show();
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="guanka">
+		第 <span></span> 关
+		<div class="btn">
+			<div class="button quit">退出</div>
+			<div class="button sure">确定</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="default">
+		<div class="yes"></div>
+		<div class="no"></div>
+		<div class="close"></div>
+		<div class="gameOver"></div>
+	</div>
+	<div class="play">
+		<span></span>
+	</div>
+	<div class="panel">
+		<div class="score">
+			<span>score</span>
+			<span>0</span>
+		</div>
+		<div class="die">
+			<span>life</span>
+			<span>10</span>
+		</div>
+		<div class="select-button">
+			Level Select
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="levels">
+		<div class="off"></div>
+		<div class="select">
+			<span>Level Select</span>
+		</div>
+		<div class="select-level">
+			<div class="level">1</div>
+			<div class="level">2</div>
+			<div class="level">3</div>
+			<div class="level">4</div>
+		</div>
+	</div>
+	
+</body>
+</html>
